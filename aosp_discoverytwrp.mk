@@ -15,12 +15,9 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := discovery
+PRODUCT_RELEASE_NAME := discoverytwrp
 
 $(call inherit-product, build/target/product/embedded.mk)
-
-# Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -55,13 +52,17 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     libgptutils \
     libz
 
+# Copy prebuilt kernel
+PRODUCT_COPY_FILES += \
+    device/sony/discoverytwrp/prebuilt/Image.gz-dtb:kernel
+
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
     system/timezone/output_data/iana/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_discovery
-PRODUCT_DEVICE := discovery
+PRODUCT_NAME := aosp_discoverytwrp
+PRODUCT_DEVICE := discoverytwrp
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia XA2 Ultra
 PRODUCT_MANUFACTURER := Sony

@@ -1,2 +1,4 @@
-add_lunch_combo omni_discovery-eng
-add_lunch_combo omni_discovery-userdebug
+#add_lunch_combo omni_discovery-eng
+#add_lunch_combo omni_discovery-userdebug
+add_lunch_combo aosp_discoverytwrp-eng
+add_lunch_combo aosp_discoverytwrp-userdebug

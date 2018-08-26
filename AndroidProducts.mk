@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_discovery.mk
+    $(LOCAL_DIR)/aosp_discoverytwrp.mk
